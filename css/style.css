@@ -539,10 +539,36 @@ img {
 .connect-item-icon:not(:last-child) {
   margin-right: 10px;
 }
+/* ---------------------subscribe--------------------- */
+.subscribe {
+  margin-left: 93px;
+}
+.subscribe-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+.subscribe-form {
+  margin-top: 20px;
+}
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+/* ---------------------button--------------------- */
 
-/* ---------------------hero-button--------------------- */
-
-.hero-button {
+.button {
+  width: 200px;
+  height: 50px;
   color: #fff;
   background-color: var(--accent-color);
   font-weight: 700;
@@ -558,8 +584,8 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.button:hover,
+.button:focus {
   background-color: #188ce8;
 }
 
@@ -744,4 +770,8 @@ img {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+/* ---------------------modal-form--------------------- */
+.modal-form {
+  padding: 40px;
 }
