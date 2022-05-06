@@ -107,7 +107,7 @@ img {
 }
 .current::after {
   display: inline-block;
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 4px;
@@ -556,16 +556,31 @@ img {
   margin: 0;
 }
 .subscribe-form {
+  display: flex;
   margin-top: 20px;
 }
 .subscribe-input {
   width: 358px;
   height: 50px;
   margin-right: 12px;
+  padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+.subscribe-field {
+  position: relative;
+}
+.subscribe-icon {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+}
+.subscribe-btn {
+  padding-right: 62px;
+  padding-left: 29px;
 }
 /* ---------------------button--------------------- */
 
@@ -697,7 +712,7 @@ img {
   overflow: hidden;
 }
 .projects-overlay {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -761,19 +776,31 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .button-close {
   position: absolute;
-  right: 8px;
-  top: 8px;
-  border: none;
-  background-color: #ffffff;
-  padding: 0;
-}
-.button-icon {
+
   width: 30px;
   height: 30px;
+  right: 8px;
+  top: 8px;
+  background-color: #ffffff;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
   cursor: pointer;
 }
+.button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button-icon:hover {
+  fill: var(--accent-color);
+  transition: fill 250ms;
+}
+
 /* ---------------------modal-form--------------------- */
 .modal-form {
   height: 100%;
@@ -800,7 +827,14 @@ img {
 .modal-form-icon {
   position: relative;
 }
-
+.modal-input:focus {
+  border-color: var(--accent-color);
+  transition: border-color 250ms;
+}
+.modal-input:focus + .form-icon {
+  fill: var(--accent-color);
+  transition: fill 250ms;
+}
 .form-icon {
   position: absolute;
   top: 50%;
@@ -834,4 +868,30 @@ img {
   margin-left: auto;
   margin-bottom: 40px;
   margin-right: auto;
+}
+.link-check {
+  color: var(--accent-color);
+}
+.check-text {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.check-text::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 1px solid black;
+  margin-right: 7px;
+}
+.input-check:checked + .check-text::before {
+  background-color: var(--accent-color);
+  border: none;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
